@@ -1,4 +1,4 @@
-﻿#Password Policy Hardening
+#Password Policy Hardening
 Get-ADUser -Filter * -SearchBase “OU=Users,DC=CSUDC01,DC=csu.local” | Set-ADUser -CannotChangePassword:$false -PasswordNeverExpires:$false -ChangePasswordAtLogon:$true
 Set-ADUser -Identity Administrator -ChangePasswordAtLogon $true
 
